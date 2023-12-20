@@ -10,15 +10,50 @@
 		C11CF6282B3345BE0040B273 /* WidgetDestroyerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6272B3345BE0040B273 /* WidgetDestroyerApp.swift */; };
 		C11CF62A2B3345BE0040B273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6292B3345BE0040B273 /* ContentView.swift */; };
 		C11CF62C2B3345BF0040B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11CF62B2B3345BF0040B273 /* Assets.xcassets */; };
-		C11CF62F2B3345BF0040B273 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11CF62E2B3345BF0040B273 /* Preview Assets.xcassets */; };
+		C11CF63C2B3350130040B273 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CF63B2B3350130040B273 /* WidgetKit.framework */; };
+		C11CF63E2B3350130040B273 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11CF63D2B3350130040B273 /* SwiftUI.framework */; };
+		C11CF6412B3350130040B273 /* NumberWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6402B3350130040B273 /* NumberWidgetBundle.swift */; };
+		C11CF6432B3350130040B273 /* NumberWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6422B3350130040B273 /* NumberWidget.swift */; };
+		C11CF6452B3350140040B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11CF6442B3350140040B273 /* Assets.xcassets */; };
+		C11CF6492B3350140040B273 /* NumberWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C11CF6392B3350130040B273 /* NumberWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C11CF6472B3350140040B273 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C11CF61C2B3345BE0040B273 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C11CF6382B3350130040B273;
+			remoteInfo = NumberWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C11CF64D2B3350140040B273 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C11CF6492B3350140040B273 /* NumberWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C11CF6242B3345BE0040B273 /* WidgetDestroyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetDestroyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11CF6272B3345BE0040B273 /* WidgetDestroyerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDestroyerApp.swift; sourceTree = "<group>"; };
 		C11CF6292B3345BE0040B273 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C11CF62B2B3345BF0040B273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C11CF62E2B3345BF0040B273 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C11CF6392B3350130040B273 /* NumberWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NumberWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C11CF63B2B3350130040B273 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C11CF63D2B3350130040B273 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C11CF6402B3350130040B273 /* NumberWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWidgetBundle.swift; sourceTree = "<group>"; };
+		C11CF6422B3350130040B273 /* NumberWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWidget.swift; sourceTree = "<group>"; };
+		C11CF6442B3350140040B273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C11CF6462B3350140040B273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +64,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C11CF6362B3350130040B273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C11CF63E2B3350130040B273 /* SwiftUI.framework in Frameworks */,
+				C11CF63C2B3350130040B273 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				C11CF6262B3345BE0040B273 /* WidgetDestroyer */,
+				C11CF63F2B3350130040B273 /* NumberWidget */,
+				C11CF63A2B3350130040B273 /* Frameworks */,
 				C11CF6252B3345BE0040B273 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				C11CF6242B3345BE0040B273 /* WidgetDestroyer.app */,
+				C11CF6392B3350130040B273 /* NumberWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,17 +101,28 @@
 				C11CF6272B3345BE0040B273 /* WidgetDestroyerApp.swift */,
 				C11CF6292B3345BE0040B273 /* ContentView.swift */,
 				C11CF62B2B3345BF0040B273 /* Assets.xcassets */,
-				C11CF62D2B3345BF0040B273 /* Preview Content */,
 			);
 			path = WidgetDestroyer;
 			sourceTree = "<group>";
 		};
-		C11CF62D2B3345BF0040B273 /* Preview Content */ = {
+		C11CF63A2B3350130040B273 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C11CF62E2B3345BF0040B273 /* Preview Assets.xcassets */,
+				C11CF63B2B3350130040B273 /* WidgetKit.framework */,
+				C11CF63D2B3350130040B273 /* SwiftUI.framework */,
 			);
-			path = "Preview Content";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C11CF63F2B3350130040B273 /* NumberWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C11CF6402B3350130040B273 /* NumberWidgetBundle.swift */,
+				C11CF6422B3350130040B273 /* NumberWidget.swift */,
+				C11CF6442B3350140040B273 /* Assets.xcassets */,
+				C11CF6462B3350140040B273 /* Info.plist */,
+			);
+			path = NumberWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +135,34 @@
 				C11CF6202B3345BE0040B273 /* Sources */,
 				C11CF6212B3345BE0040B273 /* Frameworks */,
 				C11CF6222B3345BE0040B273 /* Resources */,
+				C11CF64D2B3350140040B273 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C11CF6482B3350140040B273 /* PBXTargetDependency */,
 			);
 			name = WidgetDestroyer;
 			productName = WidgetDestroyer;
 			productReference = C11CF6242B3345BE0040B273 /* WidgetDestroyer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C11CF6382B3350130040B273 /* NumberWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C11CF64A2B3350140040B273 /* Build configuration list for PBXNativeTarget "NumberWidgetExtension" */;
+			buildPhases = (
+				C11CF6352B3350130040B273 /* Sources */,
+				C11CF6362B3350130040B273 /* Frameworks */,
+				C11CF6372B3350130040B273 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumberWidgetExtension;
+			productName = NumberWidgetExtension;
+			productReference = C11CF6392B3350130040B273 /* NumberWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +175,9 @@
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					C11CF6232B3345BE0040B273 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					C11CF6382B3350130040B273 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
@@ -116,6 +196,7 @@
 			projectRoot = "";
 			targets = (
 				C11CF6232B3345BE0040B273 /* WidgetDestroyer */,
+				C11CF6382B3350130040B273 /* NumberWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +206,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11CF62F2B3345BF0040B273 /* Preview Assets.xcassets in Resources */,
 				C11CF62C2B3345BF0040B273 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C11CF6372B3350130040B273 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C11CF6452B3350140040B273 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +230,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C11CF6352B3350130040B273 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C11CF6432B3350130040B273 /* NumberWidget.swift in Sources */,
+				C11CF6412B3350130040B273 /* NumberWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C11CF6482B3350140040B273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C11CF6382B3350130040B273 /* NumberWidgetExtension */;
+			targetProxy = C11CF6472B3350140040B273 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C11CF6302B3345BF0040B273 /* Debug */ = {
@@ -267,11 +372,12 @@
 		C11CF6332B3345BF0040B273 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WidgetDestroyer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = A5LBYGCGKX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,6 +386,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +403,12 @@
 		C11CF6342B3345BF0040B273 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WidgetDestroyer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = A5LBYGCGKX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,6 +417,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +425,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.Jager-yoo.WidgetDestroyer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C11CF64B2B3350140040B273 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5LBYGCGKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumberWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NumberWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.Jager-yoo.WidgetDestroyer.NumberWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C11CF64C2B3350140040B273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5LBYGCGKX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumberWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NumberWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.Jager-yoo.WidgetDestroyer.NumberWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +502,15 @@
 			buildConfigurations = (
 				C11CF6332B3345BF0040B273 /* Debug */,
 				C11CF6342B3345BF0040B273 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C11CF64A2B3350140040B273 /* Build configuration list for PBXNativeTarget "NumberWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C11CF64B2B3350140040B273 /* Debug */,
+				C11CF64C2B3350140040B273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
