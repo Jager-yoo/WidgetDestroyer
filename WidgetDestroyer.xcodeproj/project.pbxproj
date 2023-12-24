@@ -16,6 +16,7 @@
 		C11CF6432B3350130040B273 /* NumberWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6422B3350130040B273 /* NumberWidget.swift */; };
 		C11CF6452B3350140040B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11CF6442B3350140040B273 /* Assets.xcassets */; };
 		C11CF6492B3350140040B273 /* NumberWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C11CF6392B3350130040B273 /* NumberWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C17A77992B381911009B5F87 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A77982B381911009B5F87 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C11CF6422B3350130040B273 /* NumberWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWidget.swift; sourceTree = "<group>"; };
 		C11CF6442B3350140040B273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11CF6462B3350140040B273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C17A77982B381911009B5F87 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				C11CF6402B3350130040B273 /* NumberWidgetBundle.swift */,
 				C11CF6422B3350130040B273 /* NumberWidget.swift */,
+				C17A77982B381911009B5F87 /* NetworkManager.swift */,
 				C11CF6442B3350140040B273 /* Assets.xcassets */,
 				C11CF6462B3350140040B273 /* Info.plist */,
 			);
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C11CF6432B3350130040B273 /* NumberWidget.swift in Sources */,
+				C17A77992B381911009B5F87 /* NetworkManager.swift in Sources */,
 				C11CF6412B3350130040B273 /* NumberWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

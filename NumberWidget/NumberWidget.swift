@@ -23,19 +23,13 @@ struct Provider: TimelineProvider {
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
     Task {
-      let fetchedFact = await fetchNumberFact()
+      let fetchedFact = await NetworkManager.shared.fetchNumberFact() // ✅
       let currentDate = Date.now
       let entry = SimpleEntry(date: currentDate, fact: fetchedFact)
       let nextRefresh = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
       let timeline = Timeline(entries: [entry], policy: .after(nextRefresh))
       completion(timeline)
     }
-  }
-
-  private func fetchNumberFact() async -> String {
-    let url = URL(string: "http://numbersapi.com/random/trivia")!
-    let (data, _) = try! await URLSession.shared.data(from: url)
-    return String(decoding: data, as: UTF8.self)
   }
 }
 
