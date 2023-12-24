@@ -8,74 +8,89 @@
 import WidgetKit
 import SwiftUI
 
+// MARK: - TimelineProvider
+
 struct Provider: TimelineProvider {
   
   func placeholder(in context: Context) -> SimpleEntry {
-    SimpleEntry(date: Date(), emoji: "😀")
+    SimpleEntry(date: .now, fact: "placeholder 🗒️")
   }
 
   func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-    let entry = SimpleEntry(date: Date(), emoji: "😀")
+    let entry = SimpleEntry(date: .now, fact: "getSanpshot 📸")
     completion(entry)
   }
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    var entries: [SimpleEntry] = []
-
-    // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-    let currentDate = Date()
-    for hourOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-      let entry = SimpleEntry(date: entryDate, emoji: "😀")
-      entries.append(entry)
+    Task {
+      let fetchedFact = await fetchNumberFact()
+      let currentDate = Date.now
+      let entry = SimpleEntry(date: currentDate, fact: fetchedFact)
+      let nextRefresh = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+      let timeline = Timeline(entries: [entry], policy: .after(nextRefresh))
+      completion(timeline)
     }
+  }
 
-    let timeline = Timeline(entries: entries, policy: .atEnd)
-    completion(timeline)
+  private func fetchNumberFact() async -> String {
+    let url = URL(string: "http://numbersapi.com/random/trivia")!
+    let (data, _) = try! await URLSession.shared.data(from: url)
+    return String(decoding: data, as: UTF8.self)
   }
 }
+
+// MARK: Model
 
 struct SimpleEntry: TimelineEntry {
   let date: Date
-  let emoji: String
+  let fact: String
 }
 
+// MARK: - UI
+
 struct NumberWidgetEntryView : View {
-  var entry: Provider.Entry
+  let entry: Provider.Entry
 
   var body: some View {
     VStack {
-      Text("Time:")
-      Text(entry.date, style: .time)
-
-      Text("Emoji:")
-      Text(entry.emoji)
+      Text(entry.fact)
+        .foregroundStyle(.blue)
+      Text(entry.date, style: .relative)
+        .multilineTextAlignment(.center)
     }
   }
 }
 
+// MARK: - Widget Configuration
+
 struct NumberWidget: Widget {
-  let kind: String = "NumberWidget"
+  private let kind: String = "NumberWidget"
 
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
-      if #available(iOS 17.0, *) {
         NumberWidgetEntryView(entry: entry)
           .containerBackground(.fill.tertiary, for: .widget)
-      } else {
-        NumberWidgetEntryView(entry: entry)
-          .padding()
-          .background()
-      }
     }
-    .configurationDisplayName("My Widget")
-    .description("This is an example widget.")
+    .configurationDisplayName("Number Widget")
+    .description("fetching random number fact...")
+    .supportedFamilies(
+      [
+        .systemSmall,
+        .systemMedium,
+        .systemLarge,
+        .accessoryRectangular,
+        .accessoryCircular
+      ]
+    )
+    .contentMarginsDisabled()
   }
 }
 
-#Preview(as: .systemSmall) {
+// MARK: - Preview
+
+#Preview(as: .systemMedium) {
   NumberWidget()
 } timeline: {
-  SimpleEntry(date: .now, emoji: "😀")
-  SimpleEntry(date: .now, emoji: "🤩")
+  SimpleEntry(date: .now, fact: "Random number api")
+  SimpleEntry(date: .now, fact: "Random number api")
 }

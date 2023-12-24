@@ -6,17 +6,26 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
-  
+
+  @Environment(\.scenePhase) private var scenePhase
+
   var body: some View {
     VStack {
-      Image(systemName: "globe")
+      Image(systemName: "arrow.clockwise")
         .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+
+      Text("Go \(Text("**Background**").foregroundStyle(.blue)) to\nreload all widgets!")
     }
-    .padding()
+    .font(.largeTitle)
+    .onChange(of: scenePhase) { _, newPhase in
+      if newPhase == .background {
+        WidgetCenter.shared.reloadAllTimelines()
+        print("♻️ Widget reload")
+      }
+    }
   }
 }
 
