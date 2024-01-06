@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C112618B2B4989530038C671 /* WidgetDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11261842B492F890038C671 /* WidgetDetector.swift */; };
+		C112618D2B498B770038C671 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C112618C2B498B770038C671 /* UserDefaults+Extension.swift */; };
 		C11CF6282B3345BE0040B273 /* WidgetDestroyerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6272B3345BE0040B273 /* WidgetDestroyerApp.swift */; };
 		C11CF62A2B3345BE0040B273 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11CF6292B3345BE0040B273 /* ContentView.swift */; };
 		C11CF62C2B3345BF0040B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C11CF62B2B3345BF0040B273 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C11261842B492F890038C671 /* WidgetDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDetector.swift; sourceTree = "<group>"; };
+		C112618C2B498B770038C671 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		C11CF6242B3345BE0040B273 /* WidgetDestroyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetDestroyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11CF6272B3345BE0040B273 /* WidgetDestroyerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDestroyerApp.swift; sourceTree = "<group>"; };
 		C11CF6292B3345BE0040B273 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				C11CF6272B3345BE0040B273 /* WidgetDestroyerApp.swift */,
 				C11CF6292B3345BE0040B273 /* ContentView.swift */,
+				C11261842B492F890038C671 /* WidgetDetector.swift */,
+				C112618C2B498B770038C671 /* UserDefaults+Extension.swift */,
 				C11CF62B2B3345BF0040B273 /* Assets.xcassets */,
 			);
 			path = WidgetDestroyer;
@@ -228,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C112618B2B4989530038C671 /* WidgetDetector.swift in Sources */,
 				C11CF62A2B3345BE0040B273 /* ContentView.swift in Sources */,
+				C112618D2B498B770038C671 /* UserDefaults+Extension.swift in Sources */,
 				C11CF6282B3345BE0040B273 /* WidgetDestroyerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
